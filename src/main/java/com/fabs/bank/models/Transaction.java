@@ -3,6 +3,7 @@ package com.fabs.bank.models;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
@@ -12,10 +13,12 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import com.fabs.bank.enums.TransactionTypes;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 public class Transaction {
 
 	@NotNull
