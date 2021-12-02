@@ -16,8 +16,7 @@ public class DecryptedTransactionResponse {
 
 	private String note;
 
-	public DecryptedTransactionResponse() {
-	}
+	public DecryptedTransactionResponse() {}
 
 	public String getRequestId() {
 		return requestId;

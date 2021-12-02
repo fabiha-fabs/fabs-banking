@@ -37,6 +37,8 @@ public class EncryptedTransactionRequest {
 		this.note = note;
 	}
 	
+	public EncryptedTransactionRequest() {}
+	
 	public String getRequestId() {
 		return requestId;
 	}
