@@ -28,7 +28,7 @@ public class TransactionServices {
 
 	public void makeTransaction(EncryptedTransactionRequest transactionRequest) throws Exception {
 		DecryptedTransactionResponse decryptedTransactionRequest = restTemplate.postForObject(
-				"http://localhost:8282/base64/decode", transactionRequest, DecryptedTransactionResponse.class);
+				"http://base64-decoder/base64/decode", transactionRequest, DecryptedTransactionResponse.class);
 		this.conductValidTransaction(decryptedTransactionRequest,
 				this.validateTransaction(decryptedTransactionRequest));
 	}
